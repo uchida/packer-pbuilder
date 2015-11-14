@@ -3,9 +3,9 @@
 [![CircleCI](https://img.shields.io/circleci/project/uchida/packer-pbuilder.svg)](https://circleci.com/gh/uchida/packer-pbuilder)
 [![License](https://img.shields.io/github/license/uchida/packer-pbuilder.svg)](http://creativecommons.org/publicdomain/zero/1.0/deed)
 
-packer template to build Ubuntu Server images
+packer template to build Ubuntu Server with pbuilder and some pbuilder basetgzs and its config files.
 
-vagrant images are available at [uchida/ubuntu](https://atlas.hashicorp.com/uchida/boxes/ubuntu).
+vagrant images are available at [uchida/pbuilder](https://atlas.hashicorp.com/uchida/boxes/pbuilder).
 
 ## Building Images
 
