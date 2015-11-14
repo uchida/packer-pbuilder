@@ -1,7 +1,7 @@
-# packer-ubuntu
+# packer-pbuilder
 
-[![CircleCI](https://img.shields.io/circleci/project/uchida/packer-ubuntu.svg)](https://circleci.com/gh/uchida/packer-ubuntu)
-[![License](https://img.shields.io/github/license/uchida/packer-ubuntu.svg)](http://creativecommons.org/publicdomain/zero/1.0/deed)
+[![CircleCI](https://img.shields.io/circleci/project/uchida/packer-pbuilder.svg)](https://circleci.com/gh/uchida/packer-pbuilder)
+[![License](https://img.shields.io/github/license/uchida/packer-pbuilder.svg)](http://creativecommons.org/publicdomain/zero/1.0/deed)
 
 packer template to build Ubuntu Server images
 
@@ -12,8 +12,8 @@ vagrant images are available at [uchida/ubuntu](https://atlas.hashicorp.com/uchi
 To build images, simply run:
 
 ```
-$ git clone https://github.com/uchida/packer-ubuntu
-$ cd packer-ubuntu
+$ git clone https://github.com/uchida/packer-pbuilder
+$ cd packer-pbuilder
 $ packer build template.json
 ```
 
@@ -61,4 +61,4 @@ setup instructions are the following:
 [![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")]
 (http://creativecommons.org/publicdomain/zero/1.0/deed)
 
-dedicated to public domain by [contributors](https://github.com/uchida/packer-ubuntu/graphs/contributors).
+dedicated to public domain by [contributors](https://github.com/uchida/packer-pbuilder/graphs/contributors).

@@ -1,0 +1,15 @@
+---
+- hosts: all
+  roles:
+    - role: uchida.pbuilder
+      pbuilder_base: debian
+      pbuilder_dist: jessie
+      pbuilder_arch: amd64
+    - role: uchida.pbuilder
+      pbuilder_base: ubuntu
+      pbuilder_dist: trusty
+      pbuilder_arch: amd64
+    - role: uchida.pbuilder
+      pbuilder_base: raspbian
+      pbuilder_dist: jessie
+      pbuilder_arch: armhf

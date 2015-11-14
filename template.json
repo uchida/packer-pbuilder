@@ -1,6 +1,6 @@
 {
   "variables": {
-      "vm_name": "ubuntu",
+      "vm_name": "pbuilder",
 
       "atlas_username": "{{env `ATLAS_USERNAME`}}",
       "atlas_name": "{{env `ATLAS_NAME`}}",
@@ -84,6 +84,19 @@
       "type": "shell",
       "script": "scripts/vmguest.sh",
       "only": ["virtualbox-iso", "vmware-iso"]
+    },
+    {
+      "type": "shell",
+      "inline": [
+          "apt-get install -y python-pip python2.7-dev",
+          "pip install ansible",
+          "ansible-galaxy install uchida.pbuilder,0.0.1"
+      ]
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "provision.yml",
+      "command": "env ANSIBLE_FORCE_COLOR=1 PYTHONUNBUFFERED=1 ansible-playbook"
     },
     {
       "type": "shell",
