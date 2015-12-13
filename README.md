@@ -1,7 +1,8 @@
 # packer-pbuilder
 
-[![CircleCI](https://img.shields.io/circleci/project/uchida/packer-pbuilder.svg)](https://circleci.com/gh/uchida/packer-pbuilder)
+![Version](https://img.shields.io/github/tag/uchida/packer-pbuilder.svg)
 [![License](https://img.shields.io/github/license/uchida/packer-pbuilder.svg)](https://tldrlegal.com/license/creative-commons-cc0-1.0-universal)
+[![CircleCI](https://img.shields.io/circleci/project/uchida/packer-pbuilder.svg)](https://circleci.com/gh/uchida/packer-pbuilder)
 
 packer template to build Ubuntu Server with pbuilder and some pbuilder basetgzs and its config files.
 
