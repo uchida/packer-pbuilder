@@ -73,28 +73,32 @@
   "provisioners": [
     {
       "type": "shell",
-      "scripts": [
-        "scripts/base.sh",
-        "scripts/vagrant.sh"
+      "script": "scripts/base.sh"
+    },
+    {
+      "type": "shell-local",
+      "command": "ansible-galaxy install -v uchida.pbuilder -p roles/"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "apt-get update",
+        "apt-get install -y python"
       ]
+    },
+    {
+      "type": "ansible",
+      "playbook_file": "provision.yml",
+      "user": "root"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/vagrant.sh"
     },
     {
       "type": "shell",
       "script": "scripts/vmguest.sh",
       "only": ["virtualbox-iso", "vmware-iso"]
-    },
-    {
-      "type": "shell",
-      "inline": [
-        "apt-get install -y python-pip python2.7-dev",
-        "pip install ansible",
-        "ansible-galaxy install uchida.pbuilder,0.0.1"
-      ]
-    },
-    {
-      "type": "ansible-local",
-      "playbook_file": "provision.yml",
-      "command": "env ANSIBLE_FORCE_COLOR=1 PYTHONUNBUFFERED=1 ansible-playbook"
     },
     {
       "type": "shell",
